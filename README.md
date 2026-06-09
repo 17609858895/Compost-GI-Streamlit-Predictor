@@ -2,6 +2,8 @@
 
 This repository contains a Streamlit web app for predicting compost germination index, GI (%), using the paper's XGBoost/P1 feature protocol.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=https://github.com/17609858895/Compost-GI-Streamlit-Predictor&branch=main&mainModule=app.py)
+
 ## App Features
 
 - Single-sample GI prediction from feedstock, process, and chemistry inputs.
@@ -23,9 +25,9 @@ streamlit run app.py
 
 ## Streamlit Community Cloud Deployment
 
-Use these settings:
+Open the badge above or use these settings:
 
-- Repository: this GitHub repository
+- Repository: `17609858895/Compost-GI-Streamlit-Predictor`
 - Branch: `main`
 - Main file path: `app.py`
 - Python version: `3.12`
