@@ -32,7 +32,7 @@ Open the badge above or use these settings:
 - Main file path: `app.py`
 - Python version: `3.12`
 
-If Streamlit Cloud defaults to a newer Python version, open the app dashboard, go to Settings -> Advanced settings, set Python to 3.12, then reboot/redeploy.
+Important: choose Python 3.12 in Advanced settings before clicking Deploy. If the app was already deployed with Python 3.14, delete that failed app and redeploy it with Python 3.12, because Streamlit Community Cloud cannot change Python itself after an app has been created.
 
 ## Re-export Model
 
