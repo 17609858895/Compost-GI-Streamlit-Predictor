@@ -1,0 +1,344 @@
+{
+  "model_name": "XGBoost",
+  "target": "GI (%)",
+  "target_unit": "%",
+  "feature_set": "P1",
+  "features": [
+    "Waste type",
+    "Initial pH",
+    "Initial carbon to nitrogen",
+    "Initial moisture content (%)",
+    "Compost time (day)",
+    "Temperature_corr",
+    "Moisture_corr",
+    "pH_corr",
+    "EC（ms/cm-1）",
+    "Ammonia氨mg/kg",
+    "Nitrate硝酸盐mg/kg",
+    "总氮(%)",
+    "总有机碳变化(%)",
+    "有机质含量变化(%)"
+  ],
+  "display_names": {
+    "Waste type": "Waste type",
+    "Initial pH": "Initial pH",
+    "Initial carbon to nitrogen": "Initial C/N",
+    "Initial moisture content (%)": "Initial moisture (%)",
+    "Compost time (day)": "Compost time (day)",
+    "Temperature_corr": "Temperature (deg C)",
+    "Moisture_corr": "Moisture (%)",
+    "pH_corr": "Process pH",
+    "EC（ms/cm-1）": "EC (mS cm-1)",
+    "Ammonia氨mg/kg": "Ammonia (mg kg-1)",
+    "Nitrate硝酸盐mg/kg": "Nitrate (mg kg-1)",
+    "总氮(%)": "Total nitrogen (%)",
+    "总有机碳变化(%)": "TOC change (%)",
+    "有机质含量变化(%)": "Organic matter change (%)"
+  },
+  "feature_groups": {
+    "Feedstock and initial conditions": [
+      "Waste type",
+      "Initial pH",
+      "Initial carbon to nitrogen",
+      "Initial moisture content (%)"
+    ],
+    "Composting process": [
+      "Compost time (day)",
+      "Temperature_corr",
+      "Moisture_corr",
+      "pH_corr"
+    ],
+    "Laboratory chemistry": [
+      "EC（ms/cm-1）",
+      "Ammonia氨mg/kg",
+      "Nitrate硝酸盐mg/kg",
+      "总氮(%)",
+      "总有机碳变化(%)",
+      "有机质含量变化(%)"
+    ]
+  },
+  "waste_types": [
+    "Composting kitchen waste",
+    "cattle manure",
+    "food waste",
+    "green waste",
+    "livestock manure compost",
+    "pig manure",
+    "poultry manure",
+    "sewage sludge",
+    "sheep manure",
+    "sludge waste composting"
+  ],
+  "numeric_profile": {
+    "Initial pH": {
+      "median": 7.25,
+      "mean": 7.176035181607157,
+      "min": 4.2814,
+      "max": 9.31005,
+      "q01": 4.42798,
+      "q05": 5.65,
+      "q95": 8.755555000000001,
+      "q99": 9.24551
+    },
+    "Initial carbon to nitrogen": {
+      "median": 25.2447,
+      "mean": 26.495167849915823,
+      "min": 7.450698786,
+      "max": 53.975,
+      "q01": 8.4565,
+      "q05": 11.8673,
+      "q95": 46.922,
+      "q99": 50.404
+    },
+    "Initial moisture content (%)": {
+      "median": 60.8382,
+      "mean": 62.52409021923876,
+      "min": 40.0,
+      "max": 81.4,
+      "q01": 47.962,
+      "q05": 52.3431053604436,
+      "q95": 73.14,
+      "q99": 75.23
+    },
+    "Compost time (day)": {
+      "median": 14.0,
+      "mean": 19.391159930656553,
+      "min": 0.0,
+      "max": 185.0,
+      "q01": 0.0,
+      "q05": 0.0,
+      "q95": 59.976218415000005,
+      "q99": 90.0
+    },
+    "Temperature_corr": {
+      "median": 35.3841,
+      "mean": 37.43782808362425,
+      "min": 4.394,
+      "max": 86.44,
+      "q01": 10.056,
+      "q05": 16.416649999999997,
+      "q95": 62.97,
+      "q99": 69.11940466500003
+    },
+    "Moisture_corr": {
+      "median": 52.88827786,
+      "mean": 51.733052121312795,
+      "min": 11.01,
+      "max": 79.217,
+      "q01": 21.228,
+      "q05": 31.97,
+      "q95": 68.58871751000001,
+      "q99": 74.18470352831947
+    },
+    "pH_corr": {
+      "median": 7.87923,
+      "mean": 7.8049756618117465,
+      "min": 4.2814,
+      "max": 9.92726,
+      "q01": 5.65,
+      "q05": 6.22,
+      "q95": 9.14395,
+      "q99": 9.552514000000004
+    },
+    "EC（ms/cm-1）": {
+      "median": 2.323435,
+      "mean": 2.6054897593261126,
+      "min": 0.17716,
+      "max": 11.14,
+      "q01": 0.7436174,
+      "q05": 1.04661,
+      "q95": 5.3,
+      "q99": 7.40239999999998
+    },
+    "Ammonia氨mg/kg": {
+      "median": 815.9838500000001,
+      "mean": 1487.338765658255,
+      "min": 0.02,
+      "max": 13407.0,
+      "q01": 41.0,
+      "q05": 108.97869070603858,
+      "q95": 5000.0,
+      "q99": 5395.902376999983
+    },
+    "Nitrate硝酸盐mg/kg": {
+      "median": 264.258,
+      "mean": 410.4731340025155,
+      "min": 0.0,
+      "max": 6048.2334,
+      "q01": 0.0,
+      "q05": 0.0,
+      "q95": 1400.59,
+      "q99": 1898.1962999999812
+    },
+    "总氮(%)": {
+      "median": 1.85,
+      "mean": 1.8345023508665523,
+      "min": 0.16109,
+      "max": 4.0721,
+      "q01": 0.25463,
+      "q05": 0.349329,
+      "q95": 2.96,
+      "q99": 3.4
+    },
+    "总有机碳变化(%)": {
+      "median": 32.580200000000005,
+      "mean": 32.470089139274265,
+      "min": 1.1263401,
+      "max": 58.83,
+      "q01": 5.2904082835,
+      "q05": 11.0,
+      "q95": 48.18790368,
+      "q99": 52.0
+    },
+    "有机质含量变化(%)": {
+      "median": 61.7333,
+      "mean": 63.02829239590338,
+      "min": 20.574216,
+      "max": 97.0682806404,
+      "q01": 38.493459931999936,
+      "q05": 44.31688783497761,
+      "q95": 85.24605447700013,
+      "q99": 89.49382637674205
+    }
+  },
+  "training_rows": 2571,
+  "training_target_min": 0.0,
+  "training_target_max": 183.773,
+  "metrics_mean": {
+    "group": {
+      "train_r2": 0.9481,
+      "test_r2": 0.7464,
+      "gap": 0.2017,
+      "rmse": 15.9756,
+      "mae": 11.1686,
+      "test_r2_sd": 0.0505
+    },
+    "random": {
+      "train_r2": 0.9433,
+      "test_r2": 0.842,
+      "gap": 0.1013,
+      "rmse": 13.3729,
+      "mae": 8.8979,
+      "test_r2_sd": 0.0134
+    }
+  },
+  "metrics_raw": [
+    {
+      "validation": "random",
+      "seed": 0,
+      "train_n": 1928,
+      "test_n": 643,
+      "train_r2": 0.9395876233164473,
+      "test_r2": 0.8565247387865997,
+      "gap": 0.08306288452984756,
+      "rmse": 12.786902472415981,
+      "mae": 8.840461491798836
+    },
+    {
+      "validation": "random",
+      "seed": 7,
+      "train_n": 1928,
+      "test_n": 643,
+      "train_r2": 0.9439704022616389,
+      "test_r2": 0.8202015681129399,
+      "gap": 0.12376883414869899,
+      "rmse": 14.215699968424222,
+      "mae": 9.468436553840787
+    },
+    {
+      "validation": "random",
+      "seed": 21,
+      "train_n": 1928,
+      "test_n": 643,
+      "train_r2": 0.9450538978406817,
+      "test_r2": 0.842720661990304,
+      "gap": 0.10233323585037768,
+      "rmse": 13.401184485287617,
+      "mae": 8.605713153540005
+    },
+    {
+      "validation": "random",
+      "seed": 42,
+      "train_n": 1928,
+      "test_n": 643,
+      "train_r2": 0.9451008288980322,
+      "test_r2": 0.8479321373997017,
+      "gap": 0.0971686914983304,
+      "rmse": 12.9913456957504,
+      "mae": 8.8335017699659
+    },
+    {
+      "validation": "random",
+      "seed": 84,
+      "train_n": 1928,
+      "test_n": 643,
+      "train_r2": 0.9428149296608309,
+      "test_r2": 0.8424896707730725,
+      "gap": 0.10032525888775845,
+      "rmse": 13.469359703143098,
+      "mae": 8.741375439722427
+    },
+    {
+      "validation": "group",
+      "seed": 0,
+      "train_n": 1960,
+      "test_n": 611,
+      "train_r2": 0.9475785073239754,
+      "test_r2": 0.7525929570799554,
+      "gap": 0.19498555024401998,
+      "rmse": 15.549277510601183,
+      "mae": 10.596431717747446
+    },
+    {
+      "validation": "group",
+      "seed": 7,
+      "train_n": 1933,
+      "test_n": 638,
+      "train_r2": 0.9503801740790522,
+      "test_r2": 0.7242965795851157,
+      "gap": 0.22608359449393645,
+      "rmse": 16.79105764889467,
+      "mae": 11.590882939984118
+    },
+    {
+      "validation": "group",
+      "seed": 21,
+      "train_n": 1911,
+      "test_n": 660,
+      "train_r2": 0.9481391031421084,
+      "test_r2": 0.7822546016056793,
+      "gap": 0.16588450153642909,
+      "rmse": 14.108685539448196,
+      "mae": 10.093268924338165
+    },
+    {
+      "validation": "group",
+      "seed": 42,
+      "train_n": 1966,
+      "test_n": 605,
+      "train_r2": 0.947786857815188,
+      "test_r2": 0.672342462725082,
+      "gap": 0.275444395090106,
+      "rmse": 19.33451319393571,
+      "mae": 13.17357425555121
+    },
+    {
+      "validation": "group",
+      "seed": 84,
+      "train_n": 1901,
+      "test_n": 670,
+      "train_r2": 0.9464793943077952,
+      "test_r2": 0.8003248205603894,
+      "gap": 0.1461545737474057,
+      "rmse": 14.094313125887217,
+      "mae": 10.38890869659058
+    }
+  ],
+  "created_utc": "2026-06-09T12:38:33.052908+00:00",
+  "caveats": [
+    "Predictions are for GI (%) in compost maturity data represented by the training set.",
+    "Random-split accuracy reflects within-distribution interpolation; group-holdout accuracy is the conservative robustness estimate.",
+    "Inputs outside the training range are flagged and should be interpreted cautiously.",
+    "Missing numeric inputs are imputed by the fitted median imputer; unseen waste types are handled by one-hot encoding as unknown categories."
+  ]
+}
