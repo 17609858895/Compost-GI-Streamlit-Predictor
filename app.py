@@ -39,32 +39,35 @@ CSS = """
   --line: #d9e5e2;
 }
 .main .block-container {
-  padding-top: 1.2rem;
-  padding-bottom: 2.4rem;
-  max-width: 1220px;
+  padding-top: 1rem;
+  padding-bottom: 2.2rem;
+  max-width: 1280px;
 }
 h1, h2, h3 {
   color: var(--ink);
   letter-spacing: 0;
+  font-weight: 850;
 }
 .hero {
-  padding: 1.1rem 1.2rem 1rem 1.2rem;
+  padding: 1.25rem 1.35rem 1.1rem 1.35rem;
   border: 1px solid var(--line);
   background: linear-gradient(135deg, #f7fbfb 0%, #eef8f5 55%, #fff8f4 100%);
   border-radius: 10px;
 }
 .hero h1 {
-  font-size: 2.05rem;
+  font-size: 2.45rem;
   margin: 0 0 0.35rem 0;
+  line-height: 1.12;
 }
 .hero p {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 1.14rem;
+  line-height: 1.45;
   margin: 0;
 }
 .metric-card {
-  min-height: 104px;
-  padding: 0.9rem 1rem;
+  min-height: 116px;
+  padding: 1rem 1.05rem;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: white;
@@ -72,30 +75,32 @@ h1, h2, h3 {
 }
 .metric-card .label {
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.96rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 .metric-card .value {
   color: var(--ink);
-  font-size: 1.72rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.15;
 }
 .result-card {
-  padding: 1rem 1.1rem;
+  padding: 1.1rem 1.25rem;
   border: 1px solid #bfe3dd;
   border-radius: 10px;
   background: #f4fbf9;
 }
 .result-card .value {
   color: #1e6f68;
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 850;
+  line-height: 1.05;
 }
 .small-note {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 .warn-box {
   padding: 0.75rem 0.9rem;
@@ -108,16 +113,76 @@ div.stButton > button {
   width: 100%;
   border-radius: 7px;
   font-weight: 800;
+  font-size: 1.08rem;
   border: 1px solid #2f8f86;
   background: #2f8f86;
   color: white;
+  min-height: 3rem;
 }
 div.stDownloadButton > button {
   border-radius: 7px;
   font-weight: 750;
+  font-size: 1.02rem;
+}
+div[data-testid="stMetricValue"], div[data-testid="stMarkdownContainer"] p,
+div[data-testid="stWidgetLabel"] p {
+  font-size: 1.06rem;
+}
+div[data-testid="stWidgetLabel"] p {
+  color: var(--ink);
+  font-weight: 760;
+  line-height: 1.25;
+}
+div[data-baseweb="input"] input, div[data-baseweb="select"] {
+  font-size: 1.06rem;
+}
+section[data-testid="stSidebar"] {
+  font-size: 1.04rem;
+}
+section[data-testid="stSidebar"] h2 {
+  font-size: 1.45rem;
+}
+.stTabs [data-baseweb="tab"] {
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+.section-title {
+  font-size: 1.18rem;
+  font-weight: 850;
+  color: var(--ink);
+  margin: 0.25rem 0 0.55rem 0;
+}
+.feature-help {
+  font-size: 0.96rem;
+  color: var(--muted);
+  margin-top: -0.25rem;
 }
 </style>
 """
+
+
+UI_LABELS = {
+    "Waste type": "Waste type",
+    "Initial pH": "Initial pH",
+    "Initial carbon to nitrogen": "Initial C/N",
+    "Initial moisture content (%)": "Initial moisture (%)",
+    "Compost time (day)": "Compost time (d)",
+    "Temperature_corr": "Temperature (°C)",
+    "Moisture_corr": "Moisture (%)",
+    "pH_corr": "Process pH",
+    "EC（ms/cm-1）": "EC (mS cm⁻¹)",
+    "Ammonia氨mg/kg": "NH₄⁺-N (mg kg⁻¹)",
+    "Nitrate硝酸盐mg/kg": "NO₃⁻-N (mg kg⁻¹)",
+    "总氮(%)": "TN (%)",
+    "总有机碳变化(%)": "TOC change (%)",
+    "有机质含量变化(%)": "OM change (%)",
+}
+
+GROUP_LABELS = {
+    "Feedstock and initial conditions": "Feedstock and initial conditions",
+    "Composting process": "Composting process",
+    "Laboratory chemistry": "Laboratory chemistry",
+}
 
 
 @st.cache_resource(show_spinner=False)
@@ -140,22 +205,29 @@ def ensure_features(df: pd.DataFrame, features: list[str]) -> tuple[pd.DataFrame
     return work[features], missing
 
 
+def label_for(feature: str, metadata: dict | None = None) -> str:
+    if feature in UI_LABELS:
+        return UI_LABELS[feature]
+    if metadata is not None:
+        return metadata["display_names"].get(feature, feature)
+    return feature
+
+
 def range_warnings(row: pd.Series, metadata: dict) -> list[str]:
     warnings = []
     profile = metadata["numeric_profile"]
     for feature, stats in profile.items():
         value = row.get(feature)
         if pd.isna(value):
-            warnings.append(f"{metadata['display_names'].get(feature, feature)} is missing and will be imputed.")
+            warnings.append(f"{label_for(feature, metadata)} is missing and will be imputed.")
             continue
         try:
             value = float(value)
         except Exception:
-            warnings.append(f"{metadata['display_names'].get(feature, feature)} is not numeric and will be imputed.")
+            warnings.append(f"{label_for(feature, metadata)} is not numeric and will be imputed.")
             continue
         if value < stats["q01"] or value > stats["q99"]:
-            label = metadata["display_names"].get(feature, feature)
-            warnings.append(f"{label} is outside the 1st-99th percentile training range.")
+            warnings.append(f"{label_for(feature, metadata)} is outside the 1st-99th percentile training range.")
     waste = row.get("Waste type")
     if pd.isna(waste) or str(waste).strip() == "":
         warnings.append("Waste type is missing and will be imputed.")
@@ -193,7 +265,6 @@ bundle = load_bundle()
 model = bundle["model"]
 metadata = bundle["metadata"]
 features = bundle["feature_columns"]
-display = metadata["display_names"]
 profile = metadata["numeric_profile"]
 
 st.markdown(CSS, unsafe_allow_html=True)
@@ -236,15 +307,15 @@ with tab_single:
     group_cols = st.columns(3)
     for idx, (group_name, group_features) in enumerate(metadata["feature_groups"].items()):
         with group_cols[idx]:
-            st.markdown(f"**{group_name}**")
+            st.markdown(f"<div class='section-title'>{GROUP_LABELS.get(group_name, group_name)}</div>", unsafe_allow_html=True)
             for feature in group_features:
                 if feature == "Waste type":
                     default = metadata["waste_types"].index(metadata["waste_types"][0]) if metadata["waste_types"] else 0
-                    row[feature] = st.selectbox(display[feature], metadata["waste_types"], index=default)
+                    row[feature] = st.selectbox(label_for(feature, metadata), metadata["waste_types"], index=default)
                     continue
                 stats = profile[feature]
                 row[feature] = st.number_input(
-                    display.get(feature, feature),
+                    label_for(feature, metadata),
                     value=float(stats["median"]),
                     step=max((stats["q95"] - stats["q05"]) / 100, 0.01),
                     format="%.4f",
@@ -274,7 +345,7 @@ with tab_single:
 
 with tab_batch:
     st.subheader("Batch prediction")
-    st.write("Upload a CSV or Excel file with the feature columns below. Extra columns are preserved in the output.")
+    st.write("Upload a CSV or Excel file with the required model columns. Extra columns are preserved in the output.")
     col_a, col_b = st.columns([1, 1])
     with col_a:
         st.download_button(
@@ -340,4 +411,10 @@ with tab_about:
     )
     st.dataframe(pd.DataFrame(metadata["metrics_raw"]), use_container_width=True)
     st.markdown("**Required input columns**")
-    st.code("\n".join(features))
+    label_table = pd.DataFrame(
+        {
+            "Model column": features,
+            "UI label": [label_for(feature, metadata) for feature in features],
+        }
+    )
+    st.dataframe(label_table, use_container_width=True, hide_index=True)
