@@ -108,7 +108,7 @@ def figures(df, out, only_audit=False):
     if not (gcf.DATA_OUT / 'overfit_reduction_candidates.csv').exists():
         raise FileNotFoundError('Run --stage regularisation before plotting Fig. 5g-l.')
     for label, func in [
-        ('source data-audit figure', gcf.fig1_data_audit),
+        ('Fig. 1', gcf.fig1_data_audit),
         ('Fig. 2', gcf.fig2_target_distribution), ('Fig. 3', gcf.fig3_correlation),
         ('Fig. 5', gcf.fig4_model_comparison), ('Fig. 6', gcf.fig5_pred_vs_obs),
         ('Fig. 7', gcf.fig6_optimism_gap), ('Fig. 8', gcf.fig7_residual_reliability),
@@ -169,7 +169,7 @@ def main():
               'gi_proxy_groups': 326, 'seeds': gcf.SEEDS, 'comparisons': checks,
               'all_comparisons_passed': all(v['pass'] for v in checks.values()) if checks else None,
               'limitations': ['P0-specific SHAP/conformal results were not reported in the manuscript.',
-                  'Workflow artwork and the Streamlit screenshot are not statistical plots.',
+                  'The Streamlit screenshot (Fig. 9) is a presentation asset; app source is provided separately.',
                   'Original row-level study identities and provisional field mapping remain unresolved.']}
     (out / f'verification_{args.stage}.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'stage': args.stage, 'comparisons': checks}, indent=2), flush=True)

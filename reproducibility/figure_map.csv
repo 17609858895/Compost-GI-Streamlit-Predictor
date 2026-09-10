@@ -1,5 +1,5 @@
 current_item,source_script,function_or_output,reproducibility_note
-Fig. 1,not a statistical plot,workflow artwork,The retained fig1_data_audit function is an earlier data-audit figure and does not reproduce current workflow artwork
+Fig. 1,scripts/generate_compost_figures.py,fig1_data_audit,Data audit and segment-wise field calibration
 Fig. 2,scripts/generate_compost_figures.py,fig2_target_distribution,Statistical source plot
 Fig. 3,scripts/generate_compost_figures.py,fig3_correlation,Statistical source plot
 Fig. 4,scripts/create_fig4_revision_audit.py,main,Historical output stem FigS8_revision_audit

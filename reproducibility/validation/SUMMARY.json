@@ -45,6 +45,6 @@
   ],
   "model_roundtrip_check": "P0 and P1 successfully loaded and produced finite predictions",
   "reference_comparisons": "All numerical checks passed at rtol=1e-6 and atol=1e-6.",
-  "figure_note": "Historical statistical layouts retained; current Fig. 1 workflow artwork and Fig. 9 screenshot are outside the statistical plotting pipeline.",
+  "figure_note": "Thirteen statistical figures including the current Fig. 1 data audit were generated. Historical panel layouts retained; Fig. 9 is an app screenshot.",
   "regularisation_provenance": "Recovered original successful 2026-05-31 execution; reproduced all 110 original rows."
 }

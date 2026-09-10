@@ -32,7 +32,7 @@
   "all_comparisons_passed": null,
   "limitations": [
     "P0-specific SHAP/conformal results were not reported in the manuscript.",
-    "Workflow artwork and the Streamlit screenshot are not statistical plots.",
+    "The Streamlit screenshot (Fig. 9) is a presentation asset; app source is provided separately.",
     "Original row-level study identities and provisional field mapping remain unresolved."
   ],
   "regularisation_source_status": "Original fitting code recovered; see verification_regularisation.json."
