@@ -1,0 +1,2 @@
+# Preserve archived file bytes so SHA256SUMS.json is portable across platforms.
+* -text

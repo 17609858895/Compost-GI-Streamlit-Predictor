@@ -1,0 +1,20 @@
+current_item,source_script,function_or_output,reproducibility_note
+Fig. 1,not a statistical plot,workflow artwork,The retained fig1_data_audit function is an earlier data-audit figure and does not reproduce current workflow artwork
+Fig. 2,scripts/generate_compost_figures.py,fig2_target_distribution,Statistical source plot
+Fig. 3,scripts/generate_compost_figures.py,fig3_correlation,Statistical source plot
+Fig. 4,scripts/create_fig4_revision_audit.py,main,Historical output stem FigS8_revision_audit
+Fig. 5a-f,scripts/generate_compost_figures.py,fig4_model_comparison,Nine-model screen can be rerun with --stage models
+Fig. 5g-l,scripts/run_regularisation.py and scripts/generate_compost_figures.py,regularisation stage then fig4_model_comparison,Recovered original 11-candidate fitting code with split-dependent estimator seeds
+Fig. 6,scripts/generate_compost_figures.py,fig5_pred_vs_obs,Representative single random split seed 0
+Fig. 7,scripts/generate_compost_figures.py,fig6_optimism_gap,Random versus proxy-group results across targets
+Fig. 8,scripts/generate_compost_figures.py,fig7_residual_reliability,Historical panel lettering/layout retained; distinct from split-conformal analysis
+Fig. 9,../app.py,Streamlit user interface,Research prototype screenshot; app source provided separately
+Fig. 10,scripts/generate_compost_figures.py,fig8_shap_importance,P1 SHAP and permutation importance
+Fig. 11,scripts/generate_compost_figures.py,fig9_pdp_ale,P1 PDP and ALE with interaction surfaces
+Fig. S1,scripts/generate_compost_figures.py,fig_s1_learning_curves,P1 learning curve on one proxy-group split
+Fig. S2,scripts/generate_compost_figures.py,fig_s3_gas_targets,Gas target comparison; historical function and output numbering differ
+Fig. S3,scripts/generate_compost_figures.py,fig10_feature_ablation,Protocol comparison; panel c is P1 SHAP only
+Table 1,run_analysis.py,tables,Five-seed P0/P0+EC/P1 means; gap computed before rounding
+Table S1,run_analysis.py,tables,Target availability and proxy-group counts
+Table S2,run_analysis.py,tables,Full fixed model parameters exported as JSON
+Table S3,run_analysis.py,tables,Four leading P1 models plus all-nine companion CSV

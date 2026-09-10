@@ -1,0 +1,78 @@
+{
+  "stage": "core",
+  "python": "3.12.3",
+  "platform": "Windows",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.5.1",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0",
+    "catboost": "1.2.10",
+    "shap": "0.52.0",
+    "matplotlib": "3.9.2",
+    "seaborn": "0.13.2",
+    "scipy": "1.13.1",
+    "Pillow": "10.4.0",
+    "openpyxl": "3.1.5",
+    "joblib": "1.4.2"
+  },
+  "workbook_sha256": "8f32b062344a3de4b85cace67e091a0d3a503547535bdc2f4a3b801b65ecd0f5",
+  "records": 4248,
+  "gi_records": 2571,
+  "gi_proxy_groups": 326,
+  "seeds": [
+    0,
+    7,
+    21,
+    42,
+    84
+  ],
+  "comparisons": {
+    "primary_feature_sets_XGBoost_GI.csv": {
+      "shape_and_columns_match": true,
+      "labels_match": true,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    "day_sensitivity_raw.csv": {
+      "shape_and_columns_match": true,
+      "labels_match": true,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    "segment_a_p0_p1_control_raw.csv": {
+      "shape_and_columns_match": true,
+      "labels_match": true,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    "split_conformal_raw.csv": {
+      "shape_and_columns_match": true,
+      "labels_match": true,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    "shap_group_normalisation.csv": {
+      "shape_and_columns_match": true,
+      "labels_match": true,
+      "max_absolute_numeric_difference": 0.0,
+      "pass": true
+    },
+    "P1_SHAP_array": {
+      "shape": [
+        623,
+        23
+      ],
+      "max_absolute_difference": 0.0,
+      "pass": true
+    }
+  },
+  "all_comparisons_passed": true,
+  "limitations": [
+    "P0-specific SHAP/conformal results were not reported in the manuscript.",
+    "Workflow artwork and the Streamlit screenshot are not statistical plots.",
+    "Original row-level study identities and provisional field mapping remain unresolved."
+  ],
+  "regularisation_source_status": "Original fitting code recovered; see verification_regularisation.json."
+}

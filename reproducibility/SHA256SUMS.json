@@ -1,0 +1,217 @@
+[
+  {
+    "file": ".gitattributes",
+    "bytes": 88,
+    "sha256": "f857cd21259404f11605e5982d0637c77495074b7d7865e7d131cf715a435c24"
+  },
+  {
+    "file": ".gitignore",
+    "bytes": 34,
+    "sha256": "1a11a6edb29689817386009c5db498674184ec4f1d09f22d3024415887cdbd7d"
+  },
+  {
+    "file": "data/Compost dateset.xlsx",
+    "bytes": 934712,
+    "sha256": "8f32b062344a3de4b85cace67e091a0d3a503547535bdc2f4a3b801b65ecd0f5"
+  },
+  {
+    "file": "data/compost_calibrated.csv",
+    "bytes": 848557,
+    "sha256": "7b215ae195fe69b36aaafffda00c68dff3c2b4e636fdf52c32b72a5d5b649e27"
+  },
+  {
+    "file": "data/provenance.json",
+    "bytes": 2620,
+    "sha256": "ff93aebc85abe2f83ad3345272613c55a3ed6a41bd200d81d06d63bafcff6ac9"
+  },
+  {
+    "file": "data/upstream_LICENSE.txt",
+    "bytes": 1067,
+    "sha256": "0b7cd8b5e710f2c5712ec0e3020d0486fb1cc8b2e0e9912027bcc154dcadb2dc"
+  },
+  {
+    "file": "figure_map.csv",
+    "bytes": 2177,
+    "sha256": "bced6c3bc3adbbb2214c6cb7f83418a608a64e7783d222b938669411821f23fd"
+  },
+  {
+    "file": "models/model_metadata.json",
+    "bytes": 1926,
+    "sha256": "d98753309164017ad07cf80f5cb2ed49553a1437792def5a9cc0f2eb58f9e3eb"
+  },
+  {
+    "file": "models/XGBoost_P0.joblib",
+    "bytes": 507826,
+    "sha256": "7cb831c51478adcc4b36df7ddf3a68dce03ed31a931785a8da31972cbc8609cd"
+  },
+  {
+    "file": "models/XGBoost_P1.joblib",
+    "bytes": 499202,
+    "sha256": "ab96750fe512c95f918418c5b5eb5e93a75cf79ef1179e6cb2e27064f8f81471"
+  },
+  {
+    "file": "README.md",
+    "bytes": 8173,
+    "sha256": "9077183bbf0cbea53653e8ea273316061d12808df0e874013d171fd6cd34e986"
+  },
+  {
+    "file": "reference_results/main/Fig05_nine_model_prediction_error_metrics.csv",
+    "bytes": 1063,
+    "sha256": "a76f160fe2155e167feaa4f48669ca52e15f221ed69fdecd433e86dc6aa939d0"
+  },
+  {
+    "file": "reference_results/main/FigS1_learning_curve.csv",
+    "bytes": 482,
+    "sha256": "22f2aa648415b513050343454321aa14485d8dd34a4e54ce43be15ef78fad0eb"
+  },
+  {
+    "file": "reference_results/main/model_comparison_GI (%)_P1.csv",
+    "bytes": 11744,
+    "sha256": "c9d51f29f488479d592aed06055b1e3bc9230a5ad92046972af8a452b54982f0"
+  },
+  {
+    "file": "reference_results/main/overfit_reduction_candidates.csv",
+    "bytes": 12566,
+    "sha256": "0a9ca47275657eccae53e1b4ef19d873a8b9a9432aaa7cedf70072cd1a39e8a4"
+  },
+  {
+    "file": "reference_results/main/primary_feature_sets_XGBoost_GI.csv",
+    "bytes": 3289,
+    "sha256": "ab2a7cfbd8713839089a61967ad6f82442c928817dc63ca41876db580777dee7"
+  },
+  {
+    "file": "reference_results/main/primary_shap_XGBoost_P1_meta.json",
+    "bytes": 567,
+    "sha256": "02eb7bec538566c98bb2c1702ad19b486227ea0df69f921e9192a2ad05aa3986"
+  },
+  {
+    "file": "reference_results/main/primary_shap_XGBoost_P1_values.npy",
+    "bytes": 57444,
+    "sha256": "e72d81b19181a2d8e4e540ae25f6a1c84ce28cf56d9b33da5b165aef6d4c8b91"
+  },
+  {
+    "file": "reference_results/main/target_random_group_XGBoost.csv",
+    "bytes": 9440,
+    "sha256": "ffaf42cdd75a5c6efb767d677c94fb9771540d3cf33e421481549e34ed8b9c2a"
+  },
+  {
+    "file": "reference_results/revision/batch_proxy_group_summary.csv",
+    "bytes": 422,
+    "sha256": "c248d2e5a93ecb3945bc3b2220a8b353b8bd4c549a28d598360ee5c4990f5745"
+  },
+  {
+    "file": "reference_results/revision/day_sensitivity_raw.csv",
+    "bytes": 4552,
+    "sha256": "ecc7fb4ca67d43f9825cd9246dd8d27eec88e727e586181c5ab6f028899f6ae9"
+  },
+  {
+    "file": "reference_results/revision/major_revision_summary.json",
+    "bytes": 9427,
+    "sha256": "e054b274a26bfb2b19854247b6c4b0d75f6007e46aee9df3d4f31457477a9268"
+  },
+  {
+    "file": "reference_results/revision/p1_missingness.csv",
+    "bytes": 422,
+    "sha256": "194f91f886f1a4c8fcac6d0d148ff82d62b7b016c04f60a055d161a783a1708c"
+  },
+  {
+    "file": "reference_results/revision/segment_a_p0_p1_control_raw.csv",
+    "bytes": 2861,
+    "sha256": "3477242a993061ae5d5336af412cd25e995f2856681d8b0ef757f52f553bd14e"
+  },
+  {
+    "file": "reference_results/revision/segment_ranges.csv",
+    "bytes": 789,
+    "sha256": "49f5f59be1cd0def5b77eb2ea303d26f0be83ed33e49e2cac600558134a889aa"
+  },
+  {
+    "file": "reference_results/revision/shap_group_normalisation.csv",
+    "bytes": 382,
+    "sha256": "e1046e4c29ad957f59a4cdd239fbc1ce993d8c43fb63ae6d0bb9ddf04f01acc3"
+  },
+  {
+    "file": "reference_results/revision/source_identifier_columns.csv",
+    "bytes": 48,
+    "sha256": "a36cd6d3aa53c89236d953ca4139847ff2a34a5a5e947bd46ed8586b3da035af"
+  },
+  {
+    "file": "reference_results/revision/split_conformal_raw.csv",
+    "bytes": 1640,
+    "sha256": "9b0e78a9ad7b8ab38d042ac3e122a9ba3bfb5225ae3d950a9412c392f8e01cdc"
+  },
+  {
+    "file": "requirements.txt",
+    "bytes": 307,
+    "sha256": "d544b44583c0a0578c99d6ab0da496815e96d655a0bb385aff08eda71c346643"
+  },
+  {
+    "file": "run_analysis.py",
+    "bytes": 10601,
+    "sha256": "955ce2368dc01a1b380927a1a3c68a9878809d89873b6d4ddc397f999b3d39a2"
+  },
+  {
+    "file": "scripts/compost_model_tuning.py",
+    "bytes": 12592,
+    "sha256": "c09cfd632ad5afa87e187d2098aecc43dfada53e163c8b1958f58c70591bf4f0"
+  },
+  {
+    "file": "scripts/compost_xgb_notebook_settings.py",
+    "bytes": 8189,
+    "sha256": "6b72c6649f16f6303dd4077450290bdd1e23049fa810ed39ec3e5d3c2f170cba"
+  },
+  {
+    "file": "scripts/create_fig4_revision_audit.py",
+    "bytes": 8334,
+    "sha256": "f84f47a948703eab33ea771a00ce02c3d1f4f9cfac03c233823e14dcc763fc6a"
+  },
+  {
+    "file": "scripts/generate_compost_figures.py",
+    "bytes": 107742,
+    "sha256": "27d550719023a97979213202c212a4c6d0826c12a8eb87bf25f3ab6971b839aa"
+  },
+  {
+    "file": "scripts/major_revision_sensitivity.py",
+    "bytes": 12895,
+    "sha256": "e3c71338ee1f526ee261ae9ae34a900cb7f47ba68354b91a6b795c890762a7fa"
+  },
+  {
+    "file": "scripts/run_regularisation.py",
+    "bytes": 4502,
+    "sha256": "f02ed92eff964d210a209092e7feabe3c51a8c85b2cdf6fdebbdba9fafcf6fde"
+  },
+  {
+    "file": "validation/SUMMARY.json",
+    "bytes": 2106,
+    "sha256": "e5523a06368cc11a6a503912e0dc4be5be838c0ee7d01489528a973820c883e3"
+  },
+  {
+    "file": "validation/verification_core.json",
+    "bytes": 2080,
+    "sha256": "332c9577fc4d4e57d015c529c0c936420bfe479114a60f7aa70f88cd9d1da7a8"
+  },
+  {
+    "file": "validation/verification_figures.json",
+    "bytes": 1059,
+    "sha256": "8f07116c46363b89cac53c046e6580e5bd3759cf87dc87e01af346a842fdffbc"
+  },
+  {
+    "file": "validation/verification_models.json",
+    "bytes": 1257,
+    "sha256": "131b55f1253625d2d09c83d4682a0e2f9d1d23d395ac640c001d6531172ce1c4"
+  },
+  {
+    "file": "validation/verification_regularisation.json",
+    "bytes": 1267,
+    "sha256": "0414ac0de92c99b1b49ce425e0fd122f687785247b2dcd6ab22e83c6d1002104"
+  },
+  {
+    "file": "validation/verification_tables.json",
+    "bytes": 1058,
+    "sha256": "b852663b6b71c1cb3aaf3aaddd4621bac945fef70c5e19615250d1edc353411a"
+  },
+  {
+    "file": "validation/verification_targets.json",
+    "bytes": 1241,
+    "sha256": "4af3a33101c1467c78bbd3c749021425282d0098b65a9871ea14d923c099e1ce"
+  }
+]

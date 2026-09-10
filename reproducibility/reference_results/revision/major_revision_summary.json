@@ -1,0 +1,314 @@
+{
+  "segment_ranges": [
+    {
+      "segment": "Segment A: calibrated",
+      "variable": "pH",
+      "original_column": "pH",
+      "calibrated_column": "pH_corr",
+      "raw_n": 1662,
+      "raw_min": 4.394,
+      "raw_median": 34.024,
+      "raw_max": 86.44,
+      "calibrated_min": 4.2814,
+      "calibrated_median": 7.764844999999999,
+      "calibrated_max": 9.7678
+    },
+    {
+      "segment": "Segment A: calibrated",
+      "variable": "Temperature",
+      "original_column": "Temperature (℃)",
+      "calibrated_column": "Temperature_corr",
+      "raw_n": 1662,
+      "raw_min": 11.01,
+      "raw_median": 51.5265,
+      "raw_max": 79.217,
+      "calibrated_min": 4.394,
+      "calibrated_median": 34.024,
+      "calibrated_max": 86.44
+    },
+    {
+      "segment": "Segment A: calibrated",
+      "variable": "Moisture",
+      "original_column": "Moisture content (%)",
+      "calibrated_column": "Moisture_corr",
+      "raw_n": 1662,
+      "raw_min": 4.2814,
+      "raw_median": 7.764844999999999,
+      "raw_max": 9.7678,
+      "calibrated_min": 11.01,
+      "calibrated_median": 51.5265,
+      "calibrated_max": 79.217
+    },
+    {
+      "segment": "Segment B: native",
+      "variable": "pH",
+      "original_column": "pH",
+      "calibrated_column": "pH_corr",
+      "raw_n": 2586,
+      "raw_min": 4.071,
+      "raw_median": 8.05336,
+      "raw_max": 11.0,
+      "calibrated_min": 4.071,
+      "calibrated_median": 8.05336,
+      "calibrated_max": 11.0
+    },
+    {
+      "segment": "Segment B: native",
+      "variable": "Temperature",
+      "original_column": "Temperature (℃)",
+      "calibrated_column": "Temperature_corr",
+      "raw_n": 2586,
+      "raw_min": 8.86696,
+      "raw_median": 37.99861592,
+      "raw_max": 84.4948796,
+      "calibrated_min": 8.86696,
+      "calibrated_median": 37.99861592,
+      "calibrated_max": 84.4948796
+    },
+    {
+      "segment": "Segment B: native",
+      "variable": "Moisture",
+      "original_column": "Moisture content (%)",
+      "calibrated_column": "Moisture_corr",
+      "raw_n": 2586,
+      "raw_min": 10.2482,
+      "raw_median": 55.10374194,
+      "raw_max": 81.4,
+      "calibrated_min": 10.2482,
+      "calibrated_median": 55.10374194,
+      "calibrated_max": 81.4
+    }
+  ],
+  "group_summary": {
+    "gi_records": 2571.0,
+    "batch_proxy_groups": 326.0,
+    "median_group_size": 8.0,
+    "mean_group_size": 7.886503067484663,
+    "max_group_size": 36.0,
+    "singleton_groups": 18.0,
+    "singleton_group_percent": 5.521472392638037,
+    "two_record_groups": 1.0,
+    "two_record_group_percent": 0.3067484662576687,
+    "one_or_two_record_groups": 19.0,
+    "one_or_two_record_group_percent": 5.828220858895705,
+    "records_in_one_or_two_record_groups": 20.0,
+    "records_in_one_or_two_record_groups_percent": 0.7779074290159471
+  },
+  "source_identifier_columns": [
+    "batch_id"
+  ],
+  "p1_missingness": [
+    {
+      "feature": "EC",
+      "overall_missing_percent": 60.87570621468926,
+      "Segment A: calibrated_missing_percent": 0.0,
+      "Segment A: calibrated_observed_n": 1662,
+      "Segment B: native_missing_percent": 100.0,
+      "Segment B: native_observed_n": 0
+    },
+    {
+      "feature": "Ammonia",
+      "overall_missing_percent": 60.87570621468926,
+      "Segment A: calibrated_missing_percent": 0.0,
+      "Segment A: calibrated_observed_n": 1662,
+      "Segment B: native_missing_percent": 100.0,
+      "Segment B: native_observed_n": 0
+    },
+    {
+      "feature": "Nitrate",
+      "overall_missing_percent": 60.87570621468926,
+      "Segment A: calibrated_missing_percent": 0.0,
+      "Segment A: calibrated_observed_n": 1662,
+      "Segment B: native_missing_percent": 100.0,
+      "Segment B: native_observed_n": 0
+    },
+    {
+      "feature": "TN",
+      "overall_missing_percent": 60.87570621468926,
+      "Segment A: calibrated_missing_percent": 0.0,
+      "Segment A: calibrated_observed_n": 1662,
+      "Segment B: native_missing_percent": 100.0,
+      "Segment B: native_observed_n": 0
+    },
+    {
+      "feature": "TOC change",
+      "overall_missing_percent": 60.87570621468926,
+      "Segment A: calibrated_missing_percent": 0.0,
+      "Segment A: calibrated_observed_n": 1662,
+      "Segment B: native_missing_percent": 100.0,
+      "Segment B: native_observed_n": 0
+    },
+    {
+      "feature": "OM change",
+      "overall_missing_percent": 60.87570621468926,
+      "Segment A: calibrated_missing_percent": 0.0,
+      "Segment A: calibrated_observed_n": 1662,
+      "Segment B: native_missing_percent": 100.0,
+      "Segment B: native_observed_n": 0
+    }
+  ],
+  "segment_a_perf_mean": [
+    {
+      "feature_set": "P0",
+      "validation": "group",
+      "train_r2": 0.9716867747852603,
+      "test_r2": 0.8251368266313698,
+      "gap": 0.14654994815389052,
+      "rmse": 13.01170348886655,
+      "mae": 8.641344709855755
+    },
+    {
+      "feature_set": "P0",
+      "validation": "random",
+      "train_r2": 0.9708364977501791,
+      "test_r2": 0.9020332344331969,
+      "gap": 0.06880326331698214,
+      "rmse": 9.822989969060215,
+      "mae": 6.660528237606535
+    },
+    {
+      "feature_set": "P1",
+      "validation": "group",
+      "train_r2": 0.9810799904134345,
+      "test_r2": 0.8541423846914304,
+      "gap": 0.12693760572200424,
+      "rmse": 11.938130346259886,
+      "mae": 7.625156653818221
+    },
+    {
+      "feature_set": "P1",
+      "validation": "random",
+      "train_r2": 0.980292933161339,
+      "test_r2": 0.9123771442845848,
+      "gap": 0.06791578887675406,
+      "rmse": 9.300305666041375,
+      "mae": 6.112944185257217
+    }
+  ],
+  "day_sensitivity_mean": [
+    {
+      "feature_set": "Day_plus_waste",
+      "validation": "group",
+      "train_r2": 0.5932279202337645,
+      "test_r2": 0.49902189548110576,
+      "gap": 0.09420602475265878,
+      "rmse": 22.474468313665362,
+      "mae": 16.836816841442207
+    },
+    {
+      "feature_set": "Day_plus_waste",
+      "validation": "random",
+      "train_r2": 0.5922181484964233,
+      "test_r2": 0.5172666155247592,
+      "gap": 0.0749515329716641,
+      "rmse": 23.378737990565106,
+      "mae": 17.29768236874424
+    },
+    {
+      "feature_set": "P0_no_day",
+      "validation": "group",
+      "train_r2": 0.9204870758264899,
+      "test_r2": 0.6470290549423666,
+      "gap": 0.2734580208841234,
+      "rmse": 18.860733118536785,
+      "mae": 13.348957820923818
+    },
+    {
+      "feature_set": "P0_no_day",
+      "validation": "random",
+      "train_r2": 0.91242336942177,
+      "test_r2": 0.7887243130726531,
+      "gap": 0.12369905634911701,
+      "rmse": 15.467435742898848,
+      "mae": 10.701419756198407
+    },
+    {
+      "feature_set": "P1_no_day",
+      "validation": "group",
+      "train_r2": 0.9286542751241237,
+      "test_r2": 0.6723169818247192,
+      "gap": 0.2563372932994044,
+      "rmse": 18.16964507857354,
+      "mae": 12.478839089823792
+    },
+    {
+      "feature_set": "P1_no_day",
+      "validation": "random",
+      "train_r2": 0.9231044226703338,
+      "test_r2": 0.8114464270028179,
+      "gap": 0.11165799566751591,
+      "rmse": 14.61251062053201,
+      "mae": 9.733126199869528
+    }
+  ],
+  "split_conformal_mean": [
+    {
+      "nominal_coverage": 0.9,
+      "coverage": 0.907811337528957,
+      "qhat_gi_units": 29.188359895558193,
+      "interval_width_gi_units": 58.376719791116386,
+      "r2": 0.7006809015842326,
+      "rmse": 17.339161622691428,
+      "mae": 11.974724143621671
+    },
+    {
+      "nominal_coverage": 0.95,
+      "coverage": 0.9548072301418589,
+      "qhat_gi_units": 40.99362536010742,
+      "interval_width_gi_units": 81.98725072021485,
+      "r2": 0.7006809015842326,
+      "rmse": 17.339161622691428,
+      "mae": 11.974724143621671
+    }
+  ],
+  "split_conformal_seed_ranges": [
+    {
+      "nominal_coverage": 0.9,
+      "coverage_min": 0.8661157024793389,
+      "coverage_max": 0.9507462686567164,
+      "qhat_gi_units_min": 26.359281335449225,
+      "qhat_gi_units_max": 31.308326721191406,
+      "interval_width_gi_units_min": 52.71856267089845,
+      "interval_width_gi_units_max": 62.61665344238281
+    },
+    {
+      "nominal_coverage": 0.95,
+      "coverage_min": 0.9247135842880524,
+      "coverage_max": 0.9835820895522388,
+      "qhat_gi_units_min": 30.508932037353517,
+      "qhat_gi_units_max": 44.80614544677734,
+      "interval_width_gi_units_min": 61.017864074707035,
+      "interval_width_gi_units_max": 89.61229089355469
+    }
+  ],
+  "shap_group_normalisation": [
+    {
+      "group": "Initial",
+      "encoded_feature_count": 3,
+      "cumulative_mean_abs_shap": 10.206979274749756,
+      "cumulative_share_percent": 22.164550839018784,
+      "per_encoded_feature_mean_abs_shap": 3.4023264249165854
+    },
+    {
+      "group": "Process",
+      "encoded_feature_count": 4,
+      "cumulative_mean_abs_shap": 25.917011976242065,
+      "cumulative_share_percent": 56.27903359850405,
+      "per_encoded_feature_mean_abs_shap": 6.479252994060516
+    },
+    {
+      "group": "Chemistry",
+      "encoded_feature_count": 6,
+      "cumulative_mean_abs_shap": 6.600625097751617,
+      "cumulative_share_percent": 14.33331905653408,
+      "per_encoded_feature_mean_abs_shap": 1.100104182958603
+    },
+    {
+      "group": "Waste type",
+      "encoded_feature_count": 10,
+      "cumulative_mean_abs_shap": 3.326302295550704,
+      "cumulative_share_percent": 7.223096505943087,
+      "per_encoded_feature_mean_abs_shap": 0.3326302295550704
+    }
+  ]
+}

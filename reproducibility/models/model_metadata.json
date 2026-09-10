@@ -1,0 +1,68 @@
+{
+  "purpose": "Full-data research refits for the manuscript analysis archive",
+  "target": "GI (%)",
+  "fit_records": 2571,
+  "estimator_seed": 1,
+  "models": {
+    "P0": {
+      "filename": "XGBoost_P0.joblib",
+      "sha256": "7cb831c51478adcc4b36df7ddf3a68dce03ed31a931785a8da31972cbc8609cd",
+      "features": [
+        "Waste type",
+        "Initial pH",
+        "Initial carbon to nitrogen",
+        "Initial moisture content (%)",
+        "Compost time (day)",
+        "Temperature_corr",
+        "Moisture_corr",
+        "pH_corr"
+      ],
+      "first_ten_training_predictions": [
+        41.07314682006836,
+        32.69972610473633,
+        38.166015625,
+        55.5406494140625,
+        55.52284240722656,
+        78.08294677734375,
+        92.79694366455078,
+        35.788856506347656,
+        24.96691131591797,
+        23.385059356689453
+      ],
+      "note": "Sanity check after serialization, not an accuracy validation."
+    },
+    "P1": {
+      "filename": "XGBoost_P1.joblib",
+      "sha256": "ab96750fe512c95f918418c5b5eb5e93a75cf79ef1179e6cb2e27064f8f81471",
+      "features": [
+        "Waste type",
+        "Initial pH",
+        "Initial carbon to nitrogen",
+        "Initial moisture content (%)",
+        "Compost time (day)",
+        "Temperature_corr",
+        "Moisture_corr",
+        "pH_corr",
+        "EC（ms/cm-1）",
+        "Ammonia氨mg/kg",
+        "Nitrate硝酸盐mg/kg",
+        "总氮(%)",
+        "总有机碳变化(%)",
+        "有机质含量变化(%)"
+      ],
+      "first_ten_training_predictions": [
+        42.30434036254883,
+        32.40760803222656,
+        34.87562561035156,
+        55.16889953613281,
+        51.820281982421875,
+        78.62442016601562,
+        91.45697784423828,
+        33.18686294555664,
+        24.560365676879883,
+        24.65169906616211
+      ],
+      "note": "Sanity check after serialization, not an accuracy validation."
+    }
+  }
+}

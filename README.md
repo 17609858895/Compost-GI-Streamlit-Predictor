@@ -2,6 +2,10 @@
 
 This repository contains a Streamlit web app for predicting compost germination index, GI (%), using the paper's XGBoost/P1 feature protocol.
 
+## Manuscript Analysis Archive
+
+The [reproducibility archive](reproducibility/README.md) provides the fixed source workbook, processed data, P0/P0+EC/P1 analyses, feature ablations, P1 conformal calibration, P1 SHAP, nine-model comparisons, the recovered 11-candidate regularisation experiment, statistical figure/table scripts, model refits, dependency versions, and verification reports. See its [figure map](reproducibility/figure_map.csv) for the current Journal of Environmental Informatics manuscript numbering and its documented scientific and presentation limits.
+
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=https://github.com/17609858895/Compost-GI-Streamlit-Predictor&branch=main&mainModule=app.py)
 
 ## App Features

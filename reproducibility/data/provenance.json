@@ -1,0 +1,48 @@
+{
+  "upstream_repository": "https://github.com/1191600618/Compost-Dataset",
+  "upstream_commit": "ba42c3d617169a5e52345ce1d02c49bcfe1b416d",
+  "upstream_file_url": "https://raw.githubusercontent.com/1191600618/Compost-Dataset/ba42c3d617169a5e52345ce1d02c49bcfe1b416d/Compost%20dateset.xlsx",
+  "workbook_sha256": "8f32b062344a3de4b85cace67e091a0d3a503547535bdc2f4a3b801b65ecd0f5",
+  "matches_fixed_upstream_bytes": true,
+  "upstream_license": "MIT; reproduced in upstream_LICENSE.txt",
+  "calibration_status": "Provisional internal field remapping; not verified against original study records.",
+  "batch_id_status": "Proxy from waste type and rounded initial conditions, not original experiment identifiers.",
+  "script_provenance": [
+    {
+      "source_file": "generate_compost_figures.py",
+      "archived_file": "scripts/generate_compost_figures.py",
+      "original_sha256": "feea02382c1f553d278c96204b294e9520284ea77264e6fe16f7bbee711d5d08",
+      "changes": "Portable archive input/output paths; analysis settings retained."
+    },
+    {
+      "source_file": "major_revision_sensitivity.py",
+      "archived_file": "scripts/major_revision_sensitivity.py",
+      "original_sha256": "d0103b7b3456fa0e2dfa5535b9ab661a6ad8cc7a5d25f5daa02bb561fcfc90be",
+      "changes": "Portable archive input/output paths; analysis settings retained."
+    },
+    {
+      "source_file": "create_figs8_revision_audit.py",
+      "archived_file": "scripts/create_fig4_revision_audit.py",
+      "original_sha256": "622475cf1ab3a02e5b18a69c6ab4fc8cbb35b905369029db39b1779cf699d9d5",
+      "changes": "Portable archive input/output paths; analysis settings retained."
+    },
+    {
+      "source_file": "compost_model_tuning.py",
+      "archived_file": "scripts/compost_model_tuning.py",
+      "original_sha256": "8ccaf3e074ab0b4565deccc9516fca3e9d4da50828723e7c2f4ba82a589f9de6",
+      "changes": "Portable archive input/output paths; analysis settings retained."
+    },
+    {
+      "source_file": "compost_xgb_notebook_settings.py",
+      "archived_file": "scripts/compost_xgb_notebook_settings.py",
+      "original_sha256": "177b7759fd65d7eb5bdf718e9f0e95e23a7328b6a8b4c2138d14cb60a3699e0c",
+      "changes": "Portable archive input/output paths; analysis settings retained."
+    },
+    {
+      "archived_file": "scripts/run_regularisation.py",
+      "source": "Original successful Python execution at 2026-05-31T11:04:26Z",
+      "original_code_sha256": "30d3007e0a80947d209a8a5a2b5f3c020479fcee5b5a2091713a8f57e6cd48b3",
+      "changes": "Recovered original candidate definitions and fit loop; output path made portable."
+    }
+  ]
+}

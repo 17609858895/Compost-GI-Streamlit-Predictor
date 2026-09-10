@@ -1,0 +1,29 @@
+{
+  "model": "XGBoost",
+  "feature_set": "P1",
+  "features": [
+    "Initial pH",
+    "Initial C/N",
+    "Initial MC",
+    "Day",
+    "Temperature",
+    "Moisture",
+    "pH",
+    "EC",
+    "Ammonia",
+    "Nitrate",
+    "TN",
+    "TOC change",
+    "OM change",
+    "Waste: Composting kitchen waste",
+    "Waste: cattle manure",
+    "Waste: food waste",
+    "Waste: green waste",
+    "Waste: livestock manure compost",
+    "Waste: pig manure",
+    "Waste: poultry manure",
+    "Waste: sewage sludge",
+    "Waste: sheep manure",
+    "Waste: sludge waste composting"
+  ]
+}

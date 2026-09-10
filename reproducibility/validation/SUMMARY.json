@@ -1,0 +1,50 @@
+{
+  "verified_on": "2026-09-10",
+  "executed_stages": [
+    "core",
+    "models",
+    "targets",
+    "regularisation",
+    "tables",
+    "figures"
+  ],
+  "core_fit_counts": {
+    "protocol_comparison": 30,
+    "day_ablations": 30,
+    "segment_A_controls": 20,
+    "conformal_runs": 10,
+    "P1_SHAP_shape": [
+      623,
+      23
+    ]
+  },
+  "nine_model_comparison_fits": 90,
+  "supplementary_target_fits": 80,
+  "regularisation_candidate_fits": 110,
+  "combined_statistical_plot_outputs": [
+    "figures_compost/Fig01_data_audit/Fig01_data_audit.png",
+    "figures_compost/Fig02_target_distribution/Fig02_target_distribution.png",
+    "figures_compost/Fig03_correlation/Fig03_correlation.png",
+    "figures_compost/Fig04_model_comparison/Fig04_model_comparison.png",
+    "figures_compost/Fig04_revision_audit/FigS8_revision_audit.png",
+    "figures_compost/Fig05_pred_vs_obs/Fig05_pred_vs_obs.png",
+    "figures_compost/Fig06_temporal_validation/Fig06_temporal_validation.png",
+    "figures_compost/Fig07_residual_reliability/Fig07_residual_reliability.png",
+    "figures_compost/Fig08_SHAP_importance/Fig08_SHAP_importance.png",
+    "figures_compost/Fig09_PDP_ALE_interaction/Fig09_PDP_ALE_interaction.png",
+    "figures_compost/Fig10_feature_ablation/Fig10_feature_ablation.png",
+    "figures_compost/FigS1_learning_curves/FigS1_learning_curves.png",
+    "figures_compost/FigS2_gas_targets/FigS2_gas_targets.png"
+  ],
+  "table_outputs": [
+    "Table1_protocol_comparison.csv",
+    "TableS1_target_availability.csv",
+    "TableS2_model_parameters.json",
+    "TableS3_four_leading_models.csv",
+    "TableS3_model_comparison_all_nine.csv"
+  ],
+  "model_roundtrip_check": "P0 and P1 successfully loaded and produced finite predictions",
+  "reference_comparisons": "All numerical checks passed at rtol=1e-6 and atol=1e-6.",
+  "figure_note": "Historical statistical layouts retained; current Fig. 1 workflow artwork and Fig. 9 screenshot are outside the statistical plotting pipeline.",
+  "regularisation_provenance": "Recovered original successful 2026-05-31 execution; reproduced all 110 original rows."
+}

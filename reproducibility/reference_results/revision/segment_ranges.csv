@@ -1,0 +1,7 @@
+﻿segment,variable,original_column,calibrated_column,raw_n,raw_min,raw_median,raw_max,calibrated_min,calibrated_median,calibrated_max
+Segment A: calibrated,pH,pH,pH_corr,1662,4.394,34.024,86.44,4.2814,7.764844999999999,9.7678
+Segment A: calibrated,Temperature,Temperature (℃),Temperature_corr,1662,11.01,51.5265,79.217,4.394,34.024,86.44
+Segment A: calibrated,Moisture,Moisture content (%),Moisture_corr,1662,4.2814,7.764844999999999,9.7678,11.01,51.5265,79.217
+Segment B: native,pH,pH,pH_corr,2586,4.071,8.05336,11.0,4.071,8.05336,11.0
+Segment B: native,Temperature,Temperature (℃),Temperature_corr,2586,8.86696,37.99861592,84.4948796,8.86696,37.99861592,84.4948796
+Segment B: native,Moisture,Moisture content (%),Moisture_corr,2586,10.2482,55.10374194,81.4,10.2482,55.10374194,81.4
